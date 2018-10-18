@@ -1,27 +1,41 @@
 ![Banner](doc/consequence_banner.svg.png)
 
 # ConSequence
-O ConSequence é um jogo de memorização, em que o jogador deve lembrar uma sequência de números e informá-la de maneira exata após um dado tempo. É permitido errar, mas você vai perder seus precioso corações...
+  O ConSequence é um jogo de memorização, em que o jogador deve lembrar uma sequência de números e informá-la de maneira exata após um dado tempo. É permitido errar, mas você vai perder seus precioso corações...
 
-# Tecnologia
-Esse é um projeto realizado para a disciplina de Eletrônica Digital, na graduação em Engenharia Eletrônica da UFPE. Foi utilizada a linguagem VHDL, sendo o mesmo desenvolvido para a DE115.
+  Esse é um projeto realizado para a disciplina de Eletrônica Digital, na graduação em Engenharia Eletrônica da UFPE. Foi utilizada a linguagem VHDL, sendo o mesmo desenvolvido para a DE115.
+
+# Módulos
+(Ainda não definido)
+
+## Xorshift 
+(Ainda não definido)
+  
+## NEC IR Controller 
+(Ainda não definido)
+
+## LCD Controller 
+(Ainda não definido)
+
+## Game Engine
+(Ainda não definido)
 
 # Versão
-0.1.0
+  0.1.1
 
 # Roadmap
-v1.0: 
-- Estruturação do projeto
-- Implementação dos módulos auxiliares (Xorshift, Conversores, Multiplexadores, etc)
+## 0.x: 
+  - [x] Estruturação do projeto
+  - [ ] Implementação dos módulos auxiliares (Xorshift, Conversores, Multiplexadores, etc)
 
-v2.0:
-- Implementação do driver para o controle infravermelho
+## 1.x:
+  - [ ] Implementação do driver para o controle infravermelho
 
-v3.0:
-- Implementação do driver para o LCD
+## 2.x:
+  - [ ] Implementação do driver para o LCD
 
-v4.0:
-- Implementação da base para o GAME (1 nível)
+## 3.x:
+  - [ ] Implementação da engine do game
 
-v5.0:
-- Implementação dos 4 níveis
+## 4.x:
+  - [ ] Implementação dos 4 níveis
