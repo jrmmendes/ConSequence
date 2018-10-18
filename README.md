@@ -1,4 +1,4 @@
-
+[Banner](doc/consequence_banner.svg.png)
 
 # ConSequence
 O ConSequence é um jogo de memorização, em que o jogador deve lembrar uma sequência de números e informá-la de maneira exata após um dado tempo. É permitido errar, mas você vai perder seus precioso corações...
