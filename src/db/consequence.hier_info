@@ -1,0 +1,47 @@
+|xorshift_test
+random_number[0] <= xorshift:inst.rnd[0]
+random_number[1] <= xorshift:inst.rnd[1]
+random_number[2] <= xorshift:inst.rnd[2]
+random_number[3] <= xorshift:inst.rnd[3]
+clock => xorshift:inst.clk
+
+
+|xorshift_test|xorshift:inst
+clk => SEED[0].CLK
+clk => SEED[1].CLK
+clk => SEED[2].CLK
+clk => SEED[3].CLK
+clk => SEED[4].CLK
+clk => SEED[5].CLK
+clk => SEED[6].CLK
+clk => SEED[7].CLK
+clk => SEED[8].CLK
+clk => SEED[9].CLK
+clk => SEED[10].CLK
+clk => SEED[11].CLK
+clk => SEED[12].CLK
+clk => SEED[13].CLK
+clk => SEED[14].CLK
+clk => SEED[15].CLK
+clk => SEED[16].CLK
+clk => SEED[17].CLK
+clk => SEED[18].CLK
+clk => SEED[19].CLK
+clk => SEED[20].CLK
+clk => SEED[21].CLK
+clk => SEED[22].CLK
+clk => SEED[23].CLK
+clk => SEED[24].CLK
+clk => SEED[25].CLK
+clk => SEED[26].CLK
+clk => SEED[27].CLK
+clk => SEED[28].CLK
+clk => SEED[29].CLK
+clk => SEED[30].CLK
+clk => SEED[31].CLK
+rnd[0] <= SEED[28].DB_MAX_OUTPUT_PORT_TYPE
+rnd[1] <= SEED[29].DB_MAX_OUTPUT_PORT_TYPE
+rnd[2] <= SEED[30].DB_MAX_OUTPUT_PORT_TYPE
+rnd[3] <= SEED[31].DB_MAX_OUTPUT_PORT_TYPE
+
+

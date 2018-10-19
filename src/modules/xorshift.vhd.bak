@@ -1,0 +1,56 @@
+-------------------------------------------------
+-- Gerador de Número Pseudoaleatórios (xorshift)
+-- Por Jose R. M. Junior <jrmmendes@outlook.com>
+-- Ultima modificacao: 18/10/2018 11:38
+-------------------------------------------------
+-- Bibliotecas ----------------------------------
+library ieee;
+use ieee.numeric_std.all;
+use ieee.std_logic_1164.all;
+
+-- Entidade -------------------------------------
+entity XorshiftRNG is
+  generic(
+    r_shift: integer := 3;
+    l_shift: integer := 0
+  );
+  port(
+    clock : in std_logic;
+    -- Seed padrão da arquitetura de 32 bits
+    x32Seed : std_logic_vector(31 downto 0):= "10010100110101101010111010101000" ;
+    
+    -- Seed padrão da arquitetura de 64 bits
+    x64Seed : std_logic_vector(63 downto 0):= "1010110101011010101100010000111110101010100000011111011011010010";
+    pseudo_random_stream: out std_logic 
+  );
+end entity;
+
+-- Arquiteturas ---------------------------------
+architecture x32bits of XorshiftRNG is
+  
+  variable SEED : std_logic_vector(31 downto 0) := x32Seed;
+  variable xorResult : std_logic;
+begin 
+  
+  process(clock) is
+  begin 
+    -- Realiza as operação xorshift à esquerda 
+    if l_shift > 0 then
+      for i in 0 to l_shift loop
+       xorResult := SEED(i) XOR SEED(31);
+       SEED := shift_left(xorResult, 1);
+      end loop;
+    end if;
+    
+    -- Realiza as operações xorshift à direita
+    if r_shift > 0 then
+      for i in 0 to r_shift loop
+        xorResult := SEED(i) XOR SEED(31);
+        SEED := shift_right(xorResult, 1);
+      end loop;
+    end if;
+    
+    pseudo_random_stream <= SEED;
+
+  end process;
+end architecture;

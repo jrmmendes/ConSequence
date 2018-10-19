@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Oct 19 14:23:59 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : consequence
+Top-level Entity Name : xorshift_test
+Family : Cyclone IV E
+Total logic elements : 32
+    Total combinational functions : 25
+    Dedicated logic registers : 32
+Total registers : 32
+Total pins : 5
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
