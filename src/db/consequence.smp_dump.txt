@@ -1,0 +1,6 @@
+
+State Machine - |nec_ir_controller_test|nec_ir_controller:inst|state
+Name state.WAIT_ADDRESS state.WAIT_DIRECTION state.IDLE 
+state.IDLE 0 0 0 
+state.WAIT_DIRECTION 0 1 1 
+state.WAIT_ADDRESS 1 0 1 

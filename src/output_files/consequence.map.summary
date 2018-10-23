@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Oct 19 14:23:59 2018
+Analysis & Synthesis Status : Successful - Fri Oct 19 16:14:07 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : consequence
-Top-level Entity Name : xorshift_test
+Top-level Entity Name : nec_ir_controller_test
 Family : Cyclone IV E
-Total logic elements : 32
-    Total combinational functions : 25
-    Dedicated logic registers : 32
-Total registers : 32
-Total pins : 5
+Total logic elements : 47
+    Total combinational functions : 46
+    Dedicated logic registers : 36
+Total registers : 36
+Total pins : 6
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

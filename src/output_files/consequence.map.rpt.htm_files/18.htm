@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <HTML><HEAD>
-<TITLE>Analysis &amp; Synthesis Messages</TITLE>
+<TITLE>Post-Synthesis Netlist Statistics for Top Partition</TITLE>
 
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/base.css">
@@ -16,7 +16,76 @@
 </HEAD>
 
 <BODY>
-<div class="messages"><ul><li class="info_message">Info: *******************************************************************</li><li class="info_message">Info: Running Quartus Prime Analysis &amp; Synthesis<ul><li class="info_message">Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition</li><li class="info_message">Info: Processing started: Fri Oct 19 14:23:40 2018</li></ul></li><li class="info_message">Info: Command: quartus_map --read_settings_files=on --write_settings_files=off consequence -c consequence</li><li class="warning_message">Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.</li><li class="info_message">Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected</li><li class="info_message">Info (12021): Found 2 design units, including 1 entities, in source file modules/shift_register.vhd<ul><li class="info_message">Info (12022): Found design unit 1: shift_register-SIPO File: /home/jrmmendes/Work/HDL/ConSequence/src/modules/shift_register.vhd Line: 25</li><li class="info_message">Info (12023): Found entity 1: shift_register File: /home/jrmmendes/Work/HDL/ConSequence/src/modules/shift_register.vhd Line: 11</li></ul></li><li class="info_message">Info (12021): Found 2 design units, including 1 entities, in source file modules/xorshift.vhd<ul><li class="info_message">Info (12022): Found design unit 1: xorshift-x32bits File: /home/jrmmendes/Work/HDL/ConSequence/src/modules/xorshift.vhd Line: 27</li><li class="info_message">Info (12023): Found entity 1: xorshift File: /home/jrmmendes/Work/HDL/ConSequence/src/modules/xorshift.vhd Line: 11</li></ul></li><li class="info_message">Info (12021): Found 1 design units, including 1 entities, in source file xorshift_test.bdf<ul><li class="info_message">Info (12023): Found entity 1: xorshift_test</li></ul></li><li class="info_message">Info (12021): Found 1 design units, including 1 entities, in source file shift_register_test.bdf<ul><li class="info_message">Info (12023): Found entity 1: shift_register_test</li></ul></li><li class="info_message">Info (12127): Elaborating entity &quot;xorshift_test&quot; for the top level hierarchy</li><li class="info_message">Info (12128): Elaborating entity &quot;xorshift&quot; for hierarchy &quot;xorshift:inst&quot;</li><li class="warning_message">Warning (10492): VHDL Process Statement warning at xorshift.vhd(39): signal &quot;SEED&quot; is read inside the Process Statement but isn&apos;t in the Process Statement&apos;s sensitivity list File: /home/jrmmendes/Work/HDL/ConSequence/src/modules/xorshift.vhd Line: 39</li><li class="info_message">Info (286030): Timing-Driven Synthesis is running</li><li class="info_message">Info (16010): Generating hard_block partition &quot;hard_block:auto_generated_inst&quot;<ul><li class="info_message">Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL</li></ul></li><li class="info_message">Info (21057): Implemented 37 device resources after synthesis - the final resource count might be different<ul><li class="info_message">Info (21058): Implemented 1 input pins</li><li class="info_message">Info (21059): Implemented 4 output pins</li><li class="info_message">Info (21061): Implemented 32 logic cells</li></ul></li><li class="info_message">Info: Quartus Prime Analysis &amp; Synthesis was successful. 0 errors, 2 warnings<ul><li class="info_message">Info: Peak virtual memory: 965 megabytes</li><li class="info_message">Info: Processing ended: Fri Oct 19 14:23:59 2018</li><li class="info_message">Info: Elapsed time: 00:00:19</li><li class="info_message">Info: Total CPU time (on all processors): 00:00:44</li></ul></li></ul></div>
+<TABLE>
+<thead><TR  bgcolor="#BFBFBF">
+<TH>Type</TH>
+<TH>Count</TH>
+</TR>
+</thead><tbody><TR >
+<TD >boundary_port</TD>
+<TD >6</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cycloneiii_ff</TD>
+<TD >36</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;ENA SCLR </TD>
+<TD >32</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;plain</TD>
+<TD >4</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >cycloneiii_lcell_comb</TD>
+<TD >48</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;arith</TD>
+<TD >31</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 data inputs</TD>
+<TD >31</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;normal </TD>
+<TD >17</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 data inputs</TD>
+<TD >1</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 data inputs</TD>
+<TD >3</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 data inputs</TD>
+<TD >2</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 data inputs</TD>
+<TD >1</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 data inputs</TD>
+<TD >10</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >&nbsp;</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Max LUT depth</TD>
+<TD >6.00</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Average LUT depth</TD>
+<TD >3.53</TD>
+</TR>
+</tbody></TABLE>
 
 <noscript>JavaScript must be enabled to view the report.</noscript>
 </BODY>

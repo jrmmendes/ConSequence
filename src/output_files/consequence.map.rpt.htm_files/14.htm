@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <HTML><HEAD>
-<TITLE>Parameter Settings by Entity Instance</TITLE>
+<TITLE>Registers Removed During Synthesis</TITLE>
 
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/base.css">
@@ -16,7 +16,25 @@
 </HEAD>
 
 <BODY>
-Click on an entry below this folder.
+<TABLE>
+<thead><TR  bgcolor="#BFBFBF">
+<TH>Register name</TH>
+<TH>Reason for Removal</TH>
+</TR>
+</thead><tbody><TR >
+<TD >nec_ir_controller:inst|state_flag[2]</TD>
+<TD >Stuck at GND due to stuck port data_in</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >nec_ir_controller:inst|state.WAIT_ADDRESS</TD>
+<TD >Stuck at GND due to stuck port data_in</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Total Number of Removed Registers = 2</TD>
+<TD >&nbsp;</TD>
+</TR>
+</tbody></TABLE>
+
 <noscript>JavaScript must be enabled to view the report.</noscript>
 </BODY>
 </HTML>

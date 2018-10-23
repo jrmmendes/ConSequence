@@ -1,0 +1,1187 @@
+TimeQuest Timing Analyzer report for consequence
+Fri Oct 19 16:14:42 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'CLOCK_50'
+ 13. Slow 1200mV 85C Model Hold: 'CLOCK_50'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'CLOCK_50'
+ 22. Slow 1200mV 0C Model Hold: 'CLOCK_50'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'CLOCK_50'
+ 30. Fast 1200mV 0C Model Hold: 'CLOCK_50'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; consequence                                         ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C7                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.4%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; CLOCK_50   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++-------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary              ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 220.6 MHz ; 220.6 MHz       ; CLOCK_50   ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++----------+--------+-----------------+
+; Clock    ; Slack  ; End Point TNS   ;
++----------+--------+-----------------+
+; CLOCK_50 ; -3.533 ; -109.780        ;
++----------+--------+-----------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++----------+-------+-----------------+
+; Clock    ; Slack ; End Point TNS   ;
++----------+-------+-----------------+
+; CLOCK_50 ; 0.403 ; 0.000           ;
++----------+-------+-----------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++----------+--------+-------------------------------+
+; Clock    ; Slack  ; End Point TNS                 ;
++----------+--------+-------------------------------+
+; CLOCK_50 ; -3.000 ; -49.260                       ;
++----------+--------+-------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'CLOCK_50'                                                                                                                          ;
++--------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                               ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.533 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.446      ;
+; -3.533 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.446      ;
+; -3.533 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.446      ;
+; -3.533 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.446      ;
+; -3.533 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.446      ;
+; -3.533 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.446      ;
+; -3.533 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.446      ;
+; -3.533 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.446      ;
+; -3.533 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.446      ;
+; -3.448 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.361      ;
+; -3.448 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.361      ;
+; -3.448 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.361      ;
+; -3.448 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.361      ;
+; -3.448 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.361      ;
+; -3.448 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.361      ;
+; -3.448 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.361      ;
+; -3.448 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.361      ;
+; -3.448 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.361      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.409 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.328      ;
+; -3.379 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 3.866      ;
+; -3.379 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 3.866      ;
+; -3.379 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 3.866      ;
+; -3.379 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 3.866      ;
+; -3.379 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 3.866      ;
+; -3.379 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 3.866      ;
+; -3.379 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 3.866      ;
+; -3.379 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 3.866      ;
+; -3.379 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 3.866      ;
+; -3.350 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.269      ;
+; -3.350 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.269      ;
+; -3.350 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.269      ;
+; -3.350 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.269      ;
+; -3.350 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.269      ;
+; -3.350 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.269      ;
+; -3.350 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.269      ;
+; -3.350 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.269      ;
+; -3.350 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.269      ;
+; -3.287 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.200      ;
+; -3.287 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.200      ;
+; -3.287 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.200      ;
+; -3.287 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.200      ;
+; -3.287 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.200      ;
+; -3.287 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.200      ;
+; -3.287 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.200      ;
+; -3.287 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.200      ;
+; -3.287 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 4.200      ;
+; -3.270 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.084     ; 4.184      ;
+; -3.270 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.084     ; 4.184      ;
+; -3.270 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.084     ; 4.184      ;
+; -3.270 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.084     ; 4.184      ;
+; -3.270 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.084     ; 4.184      ;
+; -3.270 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.084     ; 4.184      ;
+; -3.270 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.084     ; 4.184      ;
+; -3.270 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.084     ; 4.184      ;
+; -3.270 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.084     ; 4.184      ;
+; -3.250 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 4.168      ;
+; -3.250 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 4.168      ;
+; -3.250 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 4.168      ;
+; -3.250 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 4.168      ;
+; -3.250 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 4.168      ;
+; -3.250 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 4.168      ;
+; -3.250 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 4.168      ;
+; -3.250 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 4.168      ;
+; -3.250 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 4.168      ;
+; -3.250 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 4.168      ;
+; -3.250 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 4.168      ;
+; -3.250 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 4.168      ;
+; -3.250 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 4.168      ;
+; -3.208 ; nec_ir_controller:inst|time_counter[25] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.127      ;
+; -3.208 ; nec_ir_controller:inst|time_counter[25] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.127      ;
+; -3.208 ; nec_ir_controller:inst|time_counter[25] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.127      ;
+; -3.208 ; nec_ir_controller:inst|time_counter[25] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.127      ;
+; -3.208 ; nec_ir_controller:inst|time_counter[25] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.127      ;
+; -3.208 ; nec_ir_controller:inst|time_counter[25] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.127      ;
+; -3.208 ; nec_ir_controller:inst|time_counter[25] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.127      ;
+; -3.208 ; nec_ir_controller:inst|time_counter[25] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.127      ;
+; -3.208 ; nec_ir_controller:inst|time_counter[25] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.079     ; 4.127      ;
+; -3.199 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 3.686      ;
+; -3.199 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 3.686      ;
+; -3.199 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 3.686      ;
+; -3.199 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 3.686      ;
+; -3.199 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 3.686      ;
+; -3.199 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 3.686      ;
++--------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'CLOCK_50'                                                                                                                                  ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.403 ; nec_ir_controller:inst|state.WAIT_DIRECTION ; nec_ir_controller:inst|state.WAIT_DIRECTION ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; nec_ir_controller:inst|state.IDLE           ; nec_ir_controller:inst|state.IDLE           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.540 ; nec_ir_controller:inst|time_counter[11]     ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.240      ;
+; 0.553 ; nec_ir_controller:inst|time_counter[14]     ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.253      ;
+; 0.555 ; nec_ir_controller:inst|state.WAIT_DIRECTION ; nec_ir_controller:inst|state_flag[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.821      ;
+; 0.557 ; nec_ir_controller:inst|time_counter[20]     ; nec_ir_controller:inst|time_counter[21]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.511      ; 1.254      ;
+; 0.558 ; nec_ir_controller:inst|time_counter[30]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.511      ; 1.255      ;
+; 0.558 ; nec_ir_controller:inst|time_counter[28]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.511      ; 1.255      ;
+; 0.559 ; nec_ir_controller:inst|time_counter[10]     ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.259      ;
+; 0.633 ; nec_ir_controller:inst|time_counter[3]      ; nec_ir_controller:inst|time_counter[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.899      ;
+; 0.635 ; nec_ir_controller:inst|time_counter[1]      ; nec_ir_controller:inst|time_counter[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.901      ;
+; 0.637 ; nec_ir_controller:inst|time_counter[15]     ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.097      ; 0.920      ;
+; 0.638 ; nec_ir_controller:inst|time_counter[2]      ; nec_ir_controller:inst|time_counter[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.904      ;
+; 0.638 ; nec_ir_controller:inst|time_counter[13]     ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.097      ; 0.921      ;
+; 0.639 ; nec_ir_controller:inst|time_counter[19]     ; nec_ir_controller:inst|time_counter[19]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.097      ; 0.922      ;
+; 0.639 ; nec_ir_controller:inst|time_counter[21]     ; nec_ir_controller:inst|time_counter[21]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.097      ; 0.922      ;
+; 0.639 ; nec_ir_controller:inst|time_counter[29]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.097      ; 0.922      ;
+; 0.641 ; nec_ir_controller:inst|time_counter[31]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.097      ; 0.924      ;
+; 0.644 ; nec_ir_controller:inst|time_counter[12]     ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.097      ; 0.927      ;
+; 0.655 ; nec_ir_controller:inst|time_counter[5]      ; nec_ir_controller:inst|time_counter[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.921      ;
+; 0.656 ; nec_ir_controller:inst|time_counter[11]     ; nec_ir_controller:inst|time_counter[11]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.922      ;
+; 0.657 ; nec_ir_controller:inst|time_counter[6]      ; nec_ir_controller:inst|time_counter[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.923      ;
+; 0.658 ; nec_ir_controller:inst|time_counter[7]      ; nec_ir_controller:inst|time_counter[7]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.924      ;
+; 0.658 ; nec_ir_controller:inst|time_counter[9]      ; nec_ir_controller:inst|time_counter[9]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.924      ;
+; 0.658 ; nec_ir_controller:inst|time_counter[27]     ; nec_ir_controller:inst|time_counter[27]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.923      ;
+; 0.659 ; nec_ir_controller:inst|time_counter[22]     ; nec_ir_controller:inst|time_counter[22]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.924      ;
+; 0.660 ; nec_ir_controller:inst|time_counter[0]      ; nec_ir_controller:inst|time_counter[0]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.926      ;
+; 0.660 ; nec_ir_controller:inst|time_counter[14]     ; nec_ir_controller:inst|time_counter[14]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.926      ;
+; 0.660 ; nec_ir_controller:inst|time_counter[23]     ; nec_ir_controller:inst|time_counter[23]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.925      ;
+; 0.660 ; nec_ir_controller:inst|time_counter[25]     ; nec_ir_controller:inst|time_counter[25]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.925      ;
+; 0.661 ; nec_ir_controller:inst|time_counter[4]      ; nec_ir_controller:inst|time_counter[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.927      ;
+; 0.661 ; nec_ir_controller:inst|time_counter[10]     ; nec_ir_controller:inst|time_counter[10]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.927      ;
+; 0.661 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[8]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.927      ;
+; 0.661 ; nec_ir_controller:inst|time_counter[11]     ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.361      ;
+; 0.662 ; nec_ir_controller:inst|time_counter[20]     ; nec_ir_controller:inst|time_counter[20]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.927      ;
+; 0.663 ; nec_ir_controller:inst|time_counter[30]     ; nec_ir_controller:inst|time_counter[30]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.928      ;
+; 0.663 ; nec_ir_controller:inst|time_counter[24]     ; nec_ir_controller:inst|time_counter[24]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.928      ;
+; 0.663 ; nec_ir_controller:inst|time_counter[26]     ; nec_ir_controller:inst|time_counter[26]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.928      ;
+; 0.663 ; nec_ir_controller:inst|time_counter[28]     ; nec_ir_controller:inst|time_counter[28]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.928      ;
+; 0.665 ; nec_ir_controller:inst|time_counter[27]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.511      ; 1.362      ;
+; 0.667 ; nec_ir_controller:inst|time_counter[9]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.367      ;
+; 0.680 ; nec_ir_controller:inst|time_counter[10]     ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.380      ;
+; 0.684 ; nec_ir_controller:inst|time_counter[28]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.511      ; 1.381      ;
+; 0.684 ; nec_ir_controller:inst|time_counter[26]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.511      ; 1.381      ;
+; 0.685 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.385      ;
+; 0.787 ; nec_ir_controller:inst|time_counter[11]     ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.487      ;
+; 0.788 ; nec_ir_controller:inst|time_counter[9]      ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.488      ;
+; 0.791 ; nec_ir_controller:inst|time_counter[27]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.511      ; 1.488      ;
+; 0.792 ; nec_ir_controller:inst|time_counter[25]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.511      ; 1.489      ;
+; 0.793 ; nec_ir_controller:inst|time_counter[7]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.493      ;
+; 0.806 ; nec_ir_controller:inst|time_counter[10]     ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.506      ;
+; 0.806 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.506      ;
+; 0.807 ; nec_ir_controller:inst|time_counter[6]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.507      ;
+; 0.810 ; nec_ir_controller:inst|time_counter[26]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.511      ; 1.507      ;
+; 0.810 ; nec_ir_controller:inst|time_counter[24]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.511      ; 1.507      ;
+; 0.813 ; nec_ir_controller:inst|time_counter[14]     ; nec_ir_controller:inst|time_counter[19]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.506      ; 1.505      ;
+; 0.914 ; nec_ir_controller:inst|time_counter[9]      ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.614      ;
+; 0.914 ; nec_ir_controller:inst|time_counter[7]      ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.614      ;
+; 0.917 ; nec_ir_controller:inst|time_counter[5]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.617      ;
+; 0.918 ; nec_ir_controller:inst|time_counter[25]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.511      ; 1.615      ;
+; 0.918 ; nec_ir_controller:inst|time_counter[23]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.511      ; 1.615      ;
+; 0.928 ; nec_ir_controller:inst|time_counter[6]      ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.628      ;
+; 0.932 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.632      ;
+; 0.932 ; nec_ir_controller:inst|time_counter[22]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.511      ; 1.629      ;
+; 0.936 ; nec_ir_controller:inst|time_counter[24]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.511      ; 1.633      ;
+; 0.937 ; nec_ir_controller:inst|time_counter[4]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.637      ;
+; 0.939 ; nec_ir_controller:inst|time_counter[14]     ; nec_ir_controller:inst|time_counter[21]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.506      ; 1.631      ;
+; 0.951 ; nec_ir_controller:inst|time_counter[3]      ; nec_ir_controller:inst|time_counter[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.217      ;
+; 0.952 ; nec_ir_controller:inst|time_counter[1]      ; nec_ir_controller:inst|time_counter[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.218      ;
+; 0.964 ; nec_ir_controller:inst|time_counter[0]      ; nec_ir_controller:inst|time_counter[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.230      ;
+; 0.965 ; nec_ir_controller:inst|time_counter[2]      ; nec_ir_controller:inst|time_counter[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.231      ;
+; 0.969 ; nec_ir_controller:inst|time_counter[0]      ; nec_ir_controller:inst|time_counter[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.235      ;
+; 0.970 ; nec_ir_controller:inst|time_counter[2]      ; nec_ir_controller:inst|time_counter[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.236      ;
+; 0.971 ; nec_ir_controller:inst|time_counter[12]     ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.097      ; 1.254      ;
+; 0.973 ; nec_ir_controller:inst|time_counter[5]      ; nec_ir_controller:inst|time_counter[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.239      ;
+; 0.975 ; nec_ir_controller:inst|time_counter[9]      ; nec_ir_controller:inst|time_counter[10]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.241      ;
+; 0.975 ; nec_ir_controller:inst|time_counter[7]      ; nec_ir_controller:inst|time_counter[8]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.241      ;
+; 0.976 ; nec_ir_controller:inst|time_counter[27]     ; nec_ir_controller:inst|time_counter[28]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.241      ;
+; 0.977 ; nec_ir_controller:inst|time_counter[23]     ; nec_ir_controller:inst|time_counter[24]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.242      ;
+; 0.977 ; nec_ir_controller:inst|time_counter[25]     ; nec_ir_controller:inst|time_counter[26]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.242      ;
+; 0.984 ; nec_ir_controller:inst|state.IDLE           ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.515      ; 1.685      ;
+; 0.984 ; nec_ir_controller:inst|state.IDLE           ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.515      ; 1.685      ;
+; 0.984 ; nec_ir_controller:inst|state.IDLE           ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.515      ; 1.685      ;
+; 0.984 ; nec_ir_controller:inst|time_counter[6]      ; nec_ir_controller:inst|time_counter[7]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.250      ;
+; 0.986 ; nec_ir_controller:inst|time_counter[22]     ; nec_ir_controller:inst|time_counter[23]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.251      ;
+; 0.988 ; nec_ir_controller:inst|time_counter[4]      ; nec_ir_controller:inst|time_counter[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.254      ;
+; 0.988 ; nec_ir_controller:inst|time_counter[10]     ; nec_ir_controller:inst|time_counter[11]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.254      ;
+; 0.988 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[9]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.254      ;
+; 0.989 ; nec_ir_controller:inst|time_counter[6]      ; nec_ir_controller:inst|time_counter[8]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.255      ;
+; 0.990 ; nec_ir_controller:inst|time_counter[26]     ; nec_ir_controller:inst|time_counter[27]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.255      ;
+; 0.990 ; nec_ir_controller:inst|time_counter[24]     ; nec_ir_controller:inst|time_counter[25]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.255      ;
+; 0.991 ; nec_ir_controller:inst|time_counter[22]     ; nec_ir_controller:inst|time_counter[24]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.256      ;
+; 0.993 ; nec_ir_controller:inst|time_counter[4]      ; nec_ir_controller:inst|time_counter[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.259      ;
+; 0.993 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[10]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.259      ;
+; 0.994 ; nec_ir_controller:inst|time_counter[20]     ; nec_ir_controller:inst|time_counter[22]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.259      ;
+; 0.995 ; nec_ir_controller:inst|time_counter[28]     ; nec_ir_controller:inst|time_counter[30]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.260      ;
+; 0.995 ; nec_ir_controller:inst|time_counter[26]     ; nec_ir_controller:inst|time_counter[28]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.260      ;
+; 0.995 ; nec_ir_controller:inst|time_counter[24]     ; nec_ir_controller:inst|time_counter[26]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.260      ;
+; 1.021 ; nec_ir_controller:inst|time_counter[3]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.721      ;
+; 1.038 ; nec_ir_controller:inst|time_counter[5]      ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.514      ; 1.738      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 239.35 MHz ; 239.35 MHz      ; CLOCK_50   ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++----------+--------+----------------+
+; Clock    ; Slack  ; End Point TNS  ;
++----------+--------+----------------+
+; CLOCK_50 ; -3.178 ; -98.191        ;
++----------+--------+----------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++----------+-------+----------------+
+; Clock    ; Slack ; End Point TNS  ;
++----------+-------+----------------+
+; CLOCK_50 ; 0.355 ; 0.000          ;
++----------+-------+----------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++----------+--------+------------------------------+
+; Clock    ; Slack  ; End Point TNS                ;
++----------+--------+------------------------------+
+; CLOCK_50 ; -3.000 ; -49.260                      ;
++----------+--------+------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'CLOCK_50'                                                                                                                           ;
++--------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                               ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.178 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.100      ;
+; -3.178 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.100      ;
+; -3.178 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.100      ;
+; -3.178 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.100      ;
+; -3.178 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.100      ;
+; -3.178 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.100      ;
+; -3.178 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.100      ;
+; -3.178 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.100      ;
+; -3.178 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.100      ;
+; -3.096 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.018      ;
+; -3.096 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.018      ;
+; -3.096 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.018      ;
+; -3.096 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.018      ;
+; -3.096 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.018      ;
+; -3.096 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.018      ;
+; -3.096 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.018      ;
+; -3.096 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.018      ;
+; -3.096 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 4.018      ;
+; -3.052 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.979      ;
+; -3.052 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.979      ;
+; -3.052 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.979      ;
+; -3.052 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.979      ;
+; -3.052 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.979      ;
+; -3.052 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.979      ;
+; -3.052 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.979      ;
+; -3.052 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.979      ;
+; -3.052 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.979      ;
+; -3.047 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.974      ;
+; -3.047 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.974      ;
+; -3.047 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.974      ;
+; -3.047 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.974      ;
+; -3.047 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.974      ;
+; -3.047 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.974      ;
+; -3.047 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.974      ;
+; -3.047 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.974      ;
+; -3.047 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.974      ;
+; -3.026 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.559      ;
+; -3.026 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.559      ;
+; -3.026 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.559      ;
+; -3.026 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.559      ;
+; -3.026 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.559      ;
+; -3.026 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.559      ;
+; -3.026 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.559      ;
+; -3.026 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.559      ;
+; -3.026 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.559      ;
+; -2.998 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.925      ;
+; -2.998 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.925      ;
+; -2.998 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.925      ;
+; -2.998 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.925      ;
+; -2.998 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.925      ;
+; -2.998 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.925      ;
+; -2.998 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.925      ;
+; -2.998 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.925      ;
+; -2.998 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.925      ;
+; -2.949 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 3.871      ;
+; -2.949 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 3.871      ;
+; -2.949 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 3.871      ;
+; -2.949 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 3.871      ;
+; -2.949 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 3.871      ;
+; -2.949 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 3.871      ;
+; -2.949 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 3.871      ;
+; -2.949 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 3.871      ;
+; -2.949 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 3.871      ;
+; -2.928 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 3.851      ;
+; -2.928 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 3.851      ;
+; -2.928 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 3.851      ;
+; -2.928 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 3.851      ;
+; -2.928 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 3.851      ;
+; -2.928 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 3.851      ;
+; -2.928 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 3.851      ;
+; -2.928 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 3.851      ;
+; -2.928 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 3.851      ;
+; -2.913 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 3.841      ;
+; -2.913 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 3.841      ;
+; -2.913 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 3.841      ;
+; -2.913 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 3.841      ;
+; -2.913 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 3.841      ;
+; -2.913 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 3.841      ;
+; -2.913 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 3.841      ;
+; -2.913 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 3.841      ;
+; -2.913 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 3.841      ;
+; -2.913 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 3.841      ;
+; -2.913 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 3.841      ;
+; -2.913 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 3.841      ;
+; -2.913 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 3.841      ;
+; -2.868 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.401      ;
+; -2.868 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.401      ;
+; -2.868 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.401      ;
+; -2.868 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.401      ;
+; -2.868 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.401      ;
+; -2.868 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.401      ;
+; -2.868 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.401      ;
+; -2.868 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.401      ;
+; -2.868 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.466     ; 3.401      ;
+; -2.868 ; nec_ir_controller:inst|time_counter[25] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.795      ;
+; -2.868 ; nec_ir_controller:inst|time_counter[25] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.795      ;
+; -2.868 ; nec_ir_controller:inst|time_counter[25] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.795      ;
+; -2.868 ; nec_ir_controller:inst|time_counter[25] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.795      ;
+; -2.868 ; nec_ir_controller:inst|time_counter[25] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.795      ;
+; -2.868 ; nec_ir_controller:inst|time_counter[25] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.795      ;
++--------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'CLOCK_50'                                                                                                                                   ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.355 ; nec_ir_controller:inst|state.WAIT_DIRECTION ; nec_ir_controller:inst|state.WAIT_DIRECTION ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
+; 0.355 ; nec_ir_controller:inst|state.IDLE           ; nec_ir_controller:inst|state.IDLE           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
+; 0.488 ; nec_ir_controller:inst|time_counter[11]     ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.128      ;
+; 0.494 ; nec_ir_controller:inst|time_counter[14]     ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.134      ;
+; 0.498 ; nec_ir_controller:inst|time_counter[30]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.466      ; 1.135      ;
+; 0.498 ; nec_ir_controller:inst|time_counter[20]     ; nec_ir_controller:inst|time_counter[21]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.466      ; 1.135      ;
+; 0.499 ; nec_ir_controller:inst|time_counter[28]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.466      ; 1.136      ;
+; 0.506 ; nec_ir_controller:inst|time_counter[10]     ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.146      ;
+; 0.509 ; nec_ir_controller:inst|state.WAIT_DIRECTION ; nec_ir_controller:inst|state_flag[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.751      ;
+; 0.579 ; nec_ir_controller:inst|time_counter[3]      ; nec_ir_controller:inst|time_counter[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.821      ;
+; 0.582 ; nec_ir_controller:inst|time_counter[1]      ; nec_ir_controller:inst|time_counter[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.824      ;
+; 0.582 ; nec_ir_controller:inst|time_counter[13]     ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.088      ; 0.841      ;
+; 0.582 ; nec_ir_controller:inst|time_counter[15]     ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.088      ; 0.841      ;
+; 0.584 ; nec_ir_controller:inst|time_counter[2]      ; nec_ir_controller:inst|time_counter[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.826      ;
+; 0.584 ; nec_ir_controller:inst|time_counter[19]     ; nec_ir_controller:inst|time_counter[19]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 0.842      ;
+; 0.584 ; nec_ir_controller:inst|time_counter[21]     ; nec_ir_controller:inst|time_counter[21]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 0.842      ;
+; 0.584 ; nec_ir_controller:inst|time_counter[29]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 0.842      ;
+; 0.585 ; nec_ir_controller:inst|time_counter[31]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 0.843      ;
+; 0.587 ; nec_ir_controller:inst|time_counter[11]     ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.227      ;
+; 0.588 ; nec_ir_controller:inst|time_counter[12]     ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.088      ; 0.847      ;
+; 0.591 ; nec_ir_controller:inst|time_counter[27]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.466      ; 1.228      ;
+; 0.600 ; nec_ir_controller:inst|time_counter[5]      ; nec_ir_controller:inst|time_counter[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.842      ;
+; 0.600 ; nec_ir_controller:inst|time_counter[11]     ; nec_ir_controller:inst|time_counter[11]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.842      ;
+; 0.600 ; nec_ir_controller:inst|time_counter[27]     ; nec_ir_controller:inst|time_counter[27]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.843      ;
+; 0.601 ; nec_ir_controller:inst|time_counter[6]      ; nec_ir_controller:inst|time_counter[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.843      ;
+; 0.601 ; nec_ir_controller:inst|time_counter[22]     ; nec_ir_controller:inst|time_counter[22]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.844      ;
+; 0.602 ; nec_ir_controller:inst|time_counter[9]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.242      ;
+; 0.603 ; nec_ir_controller:inst|time_counter[7]      ; nec_ir_controller:inst|time_counter[7]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.845      ;
+; 0.603 ; nec_ir_controller:inst|time_counter[9]      ; nec_ir_controller:inst|time_counter[9]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.845      ;
+; 0.603 ; nec_ir_controller:inst|time_counter[23]     ; nec_ir_controller:inst|time_counter[23]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.846      ;
+; 0.603 ; nec_ir_controller:inst|time_counter[25]     ; nec_ir_controller:inst|time_counter[25]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.846      ;
+; 0.604 ; nec_ir_controller:inst|time_counter[0]      ; nec_ir_controller:inst|time_counter[0]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.846      ;
+; 0.604 ; nec_ir_controller:inst|time_counter[14]     ; nec_ir_controller:inst|time_counter[14]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.846      ;
+; 0.604 ; nec_ir_controller:inst|time_counter[30]     ; nec_ir_controller:inst|time_counter[30]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.847      ;
+; 0.604 ; nec_ir_controller:inst|time_counter[20]     ; nec_ir_controller:inst|time_counter[20]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.847      ;
+; 0.605 ; nec_ir_controller:inst|time_counter[4]      ; nec_ir_controller:inst|time_counter[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.847      ;
+; 0.605 ; nec_ir_controller:inst|time_counter[10]     ; nec_ir_controller:inst|time_counter[10]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.847      ;
+; 0.605 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[8]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.847      ;
+; 0.605 ; nec_ir_controller:inst|time_counter[24]     ; nec_ir_controller:inst|time_counter[24]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.848      ;
+; 0.605 ; nec_ir_controller:inst|time_counter[26]     ; nec_ir_controller:inst|time_counter[26]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.848      ;
+; 0.605 ; nec_ir_controller:inst|time_counter[28]     ; nec_ir_controller:inst|time_counter[28]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.848      ;
+; 0.605 ; nec_ir_controller:inst|time_counter[10]     ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.245      ;
+; 0.609 ; nec_ir_controller:inst|time_counter[28]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.466      ; 1.246      ;
+; 0.609 ; nec_ir_controller:inst|time_counter[26]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.466      ; 1.246      ;
+; 0.616 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.256      ;
+; 0.697 ; nec_ir_controller:inst|time_counter[11]     ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.337      ;
+; 0.701 ; nec_ir_controller:inst|time_counter[9]      ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.341      ;
+; 0.701 ; nec_ir_controller:inst|time_counter[27]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.466      ; 1.338      ;
+; 0.705 ; nec_ir_controller:inst|time_counter[25]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.466      ; 1.342      ;
+; 0.712 ; nec_ir_controller:inst|time_counter[7]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.352      ;
+; 0.715 ; nec_ir_controller:inst|time_counter[10]     ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.355      ;
+; 0.715 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.355      ;
+; 0.719 ; nec_ir_controller:inst|time_counter[26]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.466      ; 1.356      ;
+; 0.719 ; nec_ir_controller:inst|time_counter[24]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.466      ; 1.356      ;
+; 0.722 ; nec_ir_controller:inst|time_counter[6]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.362      ;
+; 0.723 ; nec_ir_controller:inst|time_counter[14]     ; nec_ir_controller:inst|time_counter[19]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.460      ; 1.354      ;
+; 0.811 ; nec_ir_controller:inst|time_counter[9]      ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.451      ;
+; 0.811 ; nec_ir_controller:inst|time_counter[7]      ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.451      ;
+; 0.815 ; nec_ir_controller:inst|time_counter[25]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.466      ; 1.452      ;
+; 0.815 ; nec_ir_controller:inst|time_counter[23]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.466      ; 1.452      ;
+; 0.818 ; nec_ir_controller:inst|time_counter[5]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.458      ;
+; 0.821 ; nec_ir_controller:inst|time_counter[6]      ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.461      ;
+; 0.825 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.465      ;
+; 0.825 ; nec_ir_controller:inst|time_counter[22]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.466      ; 1.462      ;
+; 0.829 ; nec_ir_controller:inst|time_counter[24]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.466      ; 1.466      ;
+; 0.833 ; nec_ir_controller:inst|time_counter[14]     ; nec_ir_controller:inst|time_counter[21]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.460      ; 1.464      ;
+; 0.836 ; nec_ir_controller:inst|time_counter[4]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.476      ;
+; 0.865 ; nec_ir_controller:inst|time_counter[3]      ; nec_ir_controller:inst|time_counter[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.107      ;
+; 0.869 ; nec_ir_controller:inst|time_counter[1]      ; nec_ir_controller:inst|time_counter[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.111      ;
+; 0.871 ; nec_ir_controller:inst|time_counter[0]      ; nec_ir_controller:inst|time_counter[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.113      ;
+; 0.872 ; nec_ir_controller:inst|time_counter[2]      ; nec_ir_controller:inst|time_counter[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.114      ;
+; 0.876 ; nec_ir_controller:inst|time_counter[12]     ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.088      ; 1.135      ;
+; 0.882 ; nec_ir_controller:inst|time_counter[0]      ; nec_ir_controller:inst|time_counter[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.124      ;
+; 0.883 ; nec_ir_controller:inst|time_counter[2]      ; nec_ir_controller:inst|time_counter[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.125      ;
+; 0.886 ; nec_ir_controller:inst|state.IDLE           ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.470      ; 1.527      ;
+; 0.886 ; nec_ir_controller:inst|state.IDLE           ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.470      ; 1.527      ;
+; 0.886 ; nec_ir_controller:inst|state.IDLE           ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.470      ; 1.527      ;
+; 0.886 ; nec_ir_controller:inst|time_counter[5]      ; nec_ir_controller:inst|time_counter[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.128      ;
+; 0.886 ; nec_ir_controller:inst|time_counter[27]     ; nec_ir_controller:inst|time_counter[28]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.129      ;
+; 0.889 ; nec_ir_controller:inst|time_counter[6]      ; nec_ir_controller:inst|time_counter[7]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.131      ;
+; 0.889 ; nec_ir_controller:inst|time_counter[22]     ; nec_ir_controller:inst|time_counter[23]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.132      ;
+; 0.890 ; nec_ir_controller:inst|time_counter[9]      ; nec_ir_controller:inst|time_counter[10]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.132      ;
+; 0.890 ; nec_ir_controller:inst|time_counter[7]      ; nec_ir_controller:inst|time_counter[8]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.132      ;
+; 0.890 ; nec_ir_controller:inst|time_counter[23]     ; nec_ir_controller:inst|time_counter[24]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.133      ;
+; 0.890 ; nec_ir_controller:inst|time_counter[25]     ; nec_ir_controller:inst|time_counter[26]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.133      ;
+; 0.893 ; nec_ir_controller:inst|time_counter[4]      ; nec_ir_controller:inst|time_counter[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.135      ;
+; 0.893 ; nec_ir_controller:inst|time_counter[10]     ; nec_ir_controller:inst|time_counter[11]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.135      ;
+; 0.893 ; nec_ir_controller:inst|time_counter[26]     ; nec_ir_controller:inst|time_counter[27]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.136      ;
+; 0.893 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[9]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.135      ;
+; 0.893 ; nec_ir_controller:inst|time_counter[24]     ; nec_ir_controller:inst|time_counter[25]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.136      ;
+; 0.900 ; nec_ir_controller:inst|time_counter[6]      ; nec_ir_controller:inst|time_counter[8]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.142      ;
+; 0.900 ; nec_ir_controller:inst|time_counter[22]     ; nec_ir_controller:inst|time_counter[24]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.143      ;
+; 0.903 ; nec_ir_controller:inst|time_counter[20]     ; nec_ir_controller:inst|time_counter[22]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.146      ;
+; 0.904 ; nec_ir_controller:inst|time_counter[28]     ; nec_ir_controller:inst|time_counter[30]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.147      ;
+; 0.904 ; nec_ir_controller:inst|time_counter[4]      ; nec_ir_controller:inst|time_counter[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.146      ;
+; 0.904 ; nec_ir_controller:inst|time_counter[26]     ; nec_ir_controller:inst|time_counter[28]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.147      ;
+; 0.904 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[10]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.146      ;
+; 0.904 ; nec_ir_controller:inst|time_counter[24]     ; nec_ir_controller:inst|time_counter[26]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.147      ;
+; 0.907 ; nec_ir_controller:inst|time_counter[3]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.547      ;
+; 0.917 ; nec_ir_controller:inst|time_counter[5]      ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.469      ; 1.557      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++----------+--------+----------------+
+; Clock    ; Slack  ; End Point TNS  ;
++----------+--------+----------------+
+; CLOCK_50 ; -1.167 ; -34.214        ;
++----------+--------+----------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++----------+-------+----------------+
+; Clock    ; Slack ; End Point TNS  ;
++----------+-------+----------------+
+; CLOCK_50 ; 0.182 ; 0.000          ;
++----------+-------+----------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++----------+--------+------------------------------+
+; Clock    ; Slack  ; End Point TNS                ;
++----------+--------+------------------------------+
+; CLOCK_50 ; -3.000 ; -41.425                      ;
++----------+--------+------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'CLOCK_50'                                                                                                                           ;
++--------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                               ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.167 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.109      ;
+; -1.167 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.109      ;
+; -1.167 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.109      ;
+; -1.167 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.109      ;
+; -1.167 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.109      ;
+; -1.167 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.109      ;
+; -1.167 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.109      ;
+; -1.167 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.109      ;
+; -1.167 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.109      ;
+; -1.115 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.057      ;
+; -1.115 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.057      ;
+; -1.115 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.057      ;
+; -1.115 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.057      ;
+; -1.115 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.057      ;
+; -1.115 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.057      ;
+; -1.115 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.057      ;
+; -1.115 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.057      ;
+; -1.115 ; nec_ir_controller:inst|time_counter[6]  ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 2.057      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[23] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.082 ; nec_ir_controller:inst|time_counter[24] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.028      ;
+; -1.079 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.822      ;
+; -1.079 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.822      ;
+; -1.079 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.822      ;
+; -1.079 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.822      ;
+; -1.079 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.822      ;
+; -1.079 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.822      ;
+; -1.079 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.822      ;
+; -1.079 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.822      ;
+; -1.079 ; nec_ir_controller:inst|time_counter[29] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.822      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 1.999      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 1.999      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 1.999      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 1.999      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 1.999      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 1.999      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 1.999      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 1.999      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[4]  ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 1.999      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.003      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.003      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.003      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.003      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.003      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.003      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.003      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.003      ;
+; -1.057 ; nec_ir_controller:inst|time_counter[26] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 2.003      ;
+; -1.028 ; nec_ir_controller:inst|time_counter[1]  ; nec_ir_controller:inst|time_counter[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 1.973      ;
+; -1.024 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.767      ;
+; -1.024 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.767      ;
+; -1.024 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.767      ;
+; -1.024 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.767      ;
+; -1.024 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.767      ;
+; -1.024 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.767      ;
+; -1.024 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.767      ;
+; -1.024 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.767      ;
+; -1.024 ; nec_ir_controller:inst|time_counter[19] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.767      ;
+; -1.013 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.044     ; 1.956      ;
+; -1.013 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.044     ; 1.956      ;
+; -1.013 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.044     ; 1.956      ;
+; -1.013 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.044     ; 1.956      ;
+; -1.013 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.044     ; 1.956      ;
+; -1.013 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.044     ; 1.956      ;
+; -1.013 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.044     ; 1.956      ;
+; -1.013 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.044     ; 1.956      ;
+; -1.013 ; nec_ir_controller:inst|time_counter[17] ; nec_ir_controller:inst|time_counter[28] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.044     ; 1.956      ;
+; -1.010 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; nec_ir_controller:inst|time_counter[5]  ; nec_ir_controller:inst|time_counter[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -0.986 ; nec_ir_controller:inst|time_counter[13] ; nec_ir_controller:inst|time_counter[30] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.250     ; 1.723      ;
+; -0.986 ; nec_ir_controller:inst|time_counter[13] ; nec_ir_controller:inst|time_counter[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.250     ; 1.723      ;
+; -0.986 ; nec_ir_controller:inst|time_counter[13] ; nec_ir_controller:inst|time_counter[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.250     ; 1.723      ;
+; -0.986 ; nec_ir_controller:inst|time_counter[13] ; nec_ir_controller:inst|time_counter[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.250     ; 1.723      ;
+; -0.986 ; nec_ir_controller:inst|time_counter[13] ; nec_ir_controller:inst|time_counter[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.250     ; 1.723      ;
++--------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'CLOCK_50'                                                                                                                                   ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.182 ; nec_ir_controller:inst|state.WAIT_DIRECTION ; nec_ir_controller:inst|state.WAIT_DIRECTION ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; nec_ir_controller:inst|state.IDLE           ; nec_ir_controller:inst|state.IDLE           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.307      ;
+; 0.244 ; nec_ir_controller:inst|time_counter[11]     ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.574      ;
+; 0.250 ; nec_ir_controller:inst|state.WAIT_DIRECTION ; nec_ir_controller:inst|state_flag[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.375      ;
+; 0.254 ; nec_ir_controller:inst|time_counter[14]     ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.584      ;
+; 0.257 ; nec_ir_controller:inst|time_counter[30]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.244      ; 0.585      ;
+; 0.257 ; nec_ir_controller:inst|time_counter[20]     ; nec_ir_controller:inst|time_counter[21]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.244      ; 0.585      ;
+; 0.258 ; nec_ir_controller:inst|time_counter[28]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.244      ; 0.586      ;
+; 0.258 ; nec_ir_controller:inst|time_counter[10]     ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.588      ;
+; 0.288 ; nec_ir_controller:inst|time_counter[1]      ; nec_ir_controller:inst|time_counter[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.413      ;
+; 0.288 ; nec_ir_controller:inst|time_counter[3]      ; nec_ir_controller:inst|time_counter[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.413      ;
+; 0.290 ; nec_ir_controller:inst|time_counter[2]      ; nec_ir_controller:inst|time_counter[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.415      ;
+; 0.290 ; nec_ir_controller:inst|time_counter[15]     ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.049      ; 0.423      ;
+; 0.291 ; nec_ir_controller:inst|time_counter[13]     ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.049      ; 0.424      ;
+; 0.291 ; nec_ir_controller:inst|time_counter[31]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.049      ; 0.424      ;
+; 0.292 ; nec_ir_controller:inst|time_counter[19]     ; nec_ir_controller:inst|time_counter[19]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.049      ; 0.425      ;
+; 0.292 ; nec_ir_controller:inst|time_counter[21]     ; nec_ir_controller:inst|time_counter[21]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.049      ; 0.425      ;
+; 0.292 ; nec_ir_controller:inst|time_counter[29]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.049      ; 0.425      ;
+; 0.294 ; nec_ir_controller:inst|time_counter[12]     ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.049      ; 0.427      ;
+; 0.299 ; nec_ir_controller:inst|time_counter[5]      ; nec_ir_controller:inst|time_counter[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.424      ;
+; 0.300 ; nec_ir_controller:inst|time_counter[7]      ; nec_ir_controller:inst|time_counter[7]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.425      ;
+; 0.300 ; nec_ir_controller:inst|time_counter[0]      ; nec_ir_controller:inst|time_counter[0]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.425      ;
+; 0.300 ; nec_ir_controller:inst|time_counter[6]      ; nec_ir_controller:inst|time_counter[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.425      ;
+; 0.300 ; nec_ir_controller:inst|time_counter[11]     ; nec_ir_controller:inst|time_counter[11]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.425      ;
+; 0.300 ; nec_ir_controller:inst|time_counter[27]     ; nec_ir_controller:inst|time_counter[27]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.425      ;
+; 0.301 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[8]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; nec_ir_controller:inst|time_counter[9]      ; nec_ir_controller:inst|time_counter[9]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; nec_ir_controller:inst|time_counter[14]     ; nec_ir_controller:inst|time_counter[14]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; nec_ir_controller:inst|time_counter[22]     ; nec_ir_controller:inst|time_counter[22]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; nec_ir_controller:inst|time_counter[23]     ; nec_ir_controller:inst|time_counter[23]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; nec_ir_controller:inst|time_counter[25]     ; nec_ir_controller:inst|time_counter[25]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.426      ;
+; 0.302 ; nec_ir_controller:inst|time_counter[4]      ; nec_ir_controller:inst|time_counter[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.427      ;
+; 0.302 ; nec_ir_controller:inst|time_counter[10]     ; nec_ir_controller:inst|time_counter[10]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.427      ;
+; 0.302 ; nec_ir_controller:inst|time_counter[30]     ; nec_ir_controller:inst|time_counter[30]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.427      ;
+; 0.302 ; nec_ir_controller:inst|time_counter[20]     ; nec_ir_controller:inst|time_counter[20]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.427      ;
+; 0.302 ; nec_ir_controller:inst|time_counter[24]     ; nec_ir_controller:inst|time_counter[24]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.427      ;
+; 0.303 ; nec_ir_controller:inst|time_counter[26]     ; nec_ir_controller:inst|time_counter[26]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.428      ;
+; 0.303 ; nec_ir_controller:inst|time_counter[28]     ; nec_ir_controller:inst|time_counter[28]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.428      ;
+; 0.307 ; nec_ir_controller:inst|time_counter[11]     ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.637      ;
+; 0.309 ; nec_ir_controller:inst|time_counter[27]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.244      ; 0.637      ;
+; 0.311 ; nec_ir_controller:inst|time_counter[9]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.641      ;
+; 0.321 ; nec_ir_controller:inst|time_counter[10]     ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.651      ;
+; 0.323 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.653      ;
+; 0.324 ; nec_ir_controller:inst|time_counter[28]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.244      ; 0.652      ;
+; 0.324 ; nec_ir_controller:inst|time_counter[26]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.244      ; 0.652      ;
+; 0.373 ; nec_ir_controller:inst|time_counter[11]     ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.703      ;
+; 0.374 ; nec_ir_controller:inst|time_counter[9]      ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.704      ;
+; 0.375 ; nec_ir_controller:inst|time_counter[27]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.244      ; 0.703      ;
+; 0.376 ; nec_ir_controller:inst|time_counter[7]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.706      ;
+; 0.376 ; nec_ir_controller:inst|time_counter[25]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.244      ; 0.704      ;
+; 0.386 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.716      ;
+; 0.387 ; nec_ir_controller:inst|time_counter[10]     ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.717      ;
+; 0.388 ; nec_ir_controller:inst|time_counter[6]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.718      ;
+; 0.389 ; nec_ir_controller:inst|time_counter[24]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.244      ; 0.717      ;
+; 0.390 ; nec_ir_controller:inst|time_counter[26]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.244      ; 0.718      ;
+; 0.392 ; nec_ir_controller:inst|time_counter[14]     ; nec_ir_controller:inst|time_counter[19]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.240      ; 0.716      ;
+; 0.437 ; nec_ir_controller:inst|time_counter[1]      ; nec_ir_controller:inst|time_counter[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.562      ;
+; 0.437 ; nec_ir_controller:inst|time_counter[3]      ; nec_ir_controller:inst|time_counter[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.562      ;
+; 0.439 ; nec_ir_controller:inst|state.IDLE           ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.247      ; 0.770      ;
+; 0.439 ; nec_ir_controller:inst|state.IDLE           ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.247      ; 0.770      ;
+; 0.439 ; nec_ir_controller:inst|state.IDLE           ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.247      ; 0.770      ;
+; 0.439 ; nec_ir_controller:inst|time_counter[7]      ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.769      ;
+; 0.440 ; nec_ir_controller:inst|time_counter[9]      ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.770      ;
+; 0.441 ; nec_ir_controller:inst|time_counter[5]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.771      ;
+; 0.442 ; nec_ir_controller:inst|time_counter[23]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.244      ; 0.770      ;
+; 0.442 ; nec_ir_controller:inst|time_counter[25]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.244      ; 0.770      ;
+; 0.447 ; nec_ir_controller:inst|time_counter[0]      ; nec_ir_controller:inst|time_counter[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.572      ;
+; 0.448 ; nec_ir_controller:inst|time_counter[2]      ; nec_ir_controller:inst|time_counter[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.573      ;
+; 0.448 ; nec_ir_controller:inst|time_counter[5]      ; nec_ir_controller:inst|time_counter[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.573      ;
+; 0.449 ; nec_ir_controller:inst|time_counter[7]      ; nec_ir_controller:inst|time_counter[8]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.574      ;
+; 0.449 ; nec_ir_controller:inst|time_counter[27]     ; nec_ir_controller:inst|time_counter[28]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.574      ;
+; 0.450 ; nec_ir_controller:inst|time_counter[9]      ; nec_ir_controller:inst|time_counter[10]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.575      ;
+; 0.450 ; nec_ir_controller:inst|time_counter[23]     ; nec_ir_controller:inst|time_counter[24]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.575      ;
+; 0.450 ; nec_ir_controller:inst|time_counter[25]     ; nec_ir_controller:inst|time_counter[26]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.575      ;
+; 0.450 ; nec_ir_controller:inst|time_counter[0]      ; nec_ir_controller:inst|time_counter[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.575      ;
+; 0.451 ; nec_ir_controller:inst|time_counter[2]      ; nec_ir_controller:inst|time_counter[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.576      ;
+; 0.451 ; nec_ir_controller:inst|time_counter[6]      ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.781      ;
+; 0.452 ; nec_ir_controller:inst|time_counter[12]     ; nec_ir_controller:inst|time_counter[13]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.049      ; 0.585      ;
+; 0.452 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[15]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.782      ;
+; 0.454 ; nec_ir_controller:inst|time_counter[22]     ; nec_ir_controller:inst|time_counter[29]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.244      ; 0.782      ;
+; 0.455 ; nec_ir_controller:inst|time_counter[24]     ; nec_ir_controller:inst|time_counter[31]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.244      ; 0.783      ;
+; 0.456 ; nec_ir_controller:inst|time_counter[4]      ; nec_ir_controller:inst|time_counter[12]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 0.786      ;
+; 0.458 ; nec_ir_controller:inst|time_counter[14]     ; nec_ir_controller:inst|time_counter[21]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.240      ; 0.782      ;
+; 0.458 ; nec_ir_controller:inst|time_counter[6]      ; nec_ir_controller:inst|time_counter[7]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.583      ;
+; 0.459 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[9]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.584      ;
+; 0.459 ; nec_ir_controller:inst|time_counter[22]     ; nec_ir_controller:inst|time_counter[23]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.584      ;
+; 0.460 ; nec_ir_controller:inst|time_counter[4]      ; nec_ir_controller:inst|time_counter[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.585      ;
+; 0.460 ; nec_ir_controller:inst|time_counter[10]     ; nec_ir_controller:inst|time_counter[11]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.585      ;
+; 0.460 ; nec_ir_controller:inst|time_counter[24]     ; nec_ir_controller:inst|time_counter[25]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.585      ;
+; 0.461 ; nec_ir_controller:inst|time_counter[26]     ; nec_ir_controller:inst|time_counter[27]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.586      ;
+; 0.461 ; nec_ir_controller:inst|time_counter[6]      ; nec_ir_controller:inst|time_counter[8]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.586      ;
+; 0.462 ; nec_ir_controller:inst|time_counter[8]      ; nec_ir_controller:inst|time_counter[10]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.587      ;
+; 0.462 ; nec_ir_controller:inst|time_counter[22]     ; nec_ir_controller:inst|time_counter[24]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.587      ;
+; 0.463 ; nec_ir_controller:inst|time_counter[20]     ; nec_ir_controller:inst|time_counter[22]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.588      ;
+; 0.463 ; nec_ir_controller:inst|time_counter[4]      ; nec_ir_controller:inst|time_counter[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.588      ;
+; 0.463 ; nec_ir_controller:inst|time_counter[24]     ; nec_ir_controller:inst|time_counter[26]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.588      ;
+; 0.464 ; nec_ir_controller:inst|time_counter[28]     ; nec_ir_controller:inst|time_counter[30]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.589      ;
+; 0.464 ; nec_ir_controller:inst|time_counter[26]     ; nec_ir_controller:inst|time_counter[28]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.589      ;
+; 0.490 ; nec_ir_controller:inst|state.IDLE           ; nec_ir_controller:inst|state_flag[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.615      ;
+; 0.490 ; nec_ir_controller:inst|state.IDLE           ; nec_ir_controller:inst|state.WAIT_DIRECTION ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.615      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.533   ; 0.182 ; N/A      ; N/A     ; -3.000              ;
+;  CLOCK_50        ; -3.533   ; 0.182 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -109.78  ; 0.0   ; 0.0      ; 0.0     ; -49.26              ;
+;  CLOCK_50        ; -109.780 ; 0.000 ; N/A      ; N/A     ; -49.260             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; LEDG[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[2]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[1]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; IRDA_RXD                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; CLOCK_50                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDG[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; LEDR[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; LEDR[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; LEDR[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDG[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDG[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 1551     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 1551     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 35    ; 35   ;
+; Unconstrained Output Ports      ; 3     ; 3    ;
+; Unconstrained Output Port Paths ; 3     ; 3    ;
++---------------------------------+-------+------+
+
+
++------------------------------------------+
+; Clock Status Summary                     ;
++----------+----------+------+-------------+
+; Target   ; Clock    ; Type ; Status      ;
++----------+----------+------+-------------+
+; CLOCK_50 ; CLOCK_50 ; Base ; Constrained ;
++----------+----------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; IRDA_RXD   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; LEDG[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; IRDA_RXD   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; LEDG[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Fri Oct 19 16:14:39 2018
+Info: Command: quartus_sta consequence -c consequence
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'consequence.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.533
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.533            -109.780 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.403
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.403               0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -49.260 CLOCK_50 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.178
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.178             -98.191 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.355
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.355               0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -49.260 CLOCK_50 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.167
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.167             -34.214 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.182
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.182               0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -41.425 CLOCK_50 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 881 megabytes
+    Info: Processing ended: Fri Oct 19 16:14:42 2018
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

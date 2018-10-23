@@ -7,16 +7,16 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off consequence -c consequence --vector_source="/home/jrmmendes/Work/HDL/ConSequence/src/xorshift_test.vwf" --testbench_file="/home/jrmmendes/Work/HDL/ConSequence/src/simulation/qsim/xorshift_test.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off consequence -c consequence --vector_source="/home/jrmmendes/Work/HDL/ConSequence/src/nec_ir_controller_test.vwf" --testbench_file="/home/jrmmendes/Work/HDL/ConSequence/src/simulation/qsim/nec_ir_controller_test.vwf.vht"
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Fri Oct 19 14:24:05 2018Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off consequence -c consequence --vector_source=/home/jrmmendes/Work/HDL/ConSequence/src/xorshift_test.vwf --testbench_file=/home/jrmmendes/Work/HDL/ConSequence/src/simulation/qsim/xorshift_test.vwf.vhtInfo (119006): Selected device EP4CE115F29C7 for design "consequence"Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Fri Oct 19 15:58:06 2018Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off consequence -c consequence --vector_source=/home/jrmmendes/Work/HDL/ConSequence/src/nec_ir_controller_test.vwf --testbench_file=/home/jrmmendes/Work/HDL/ConSequence/src/simulation/qsim/nec_ir_controller_test.vwf.vhtInfo (119006): Selected device EP4CE115F29C7 for design "consequence"Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
 quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/jrmmendes/Work/HDL/ConSequence/src/simulation/qsim/" consequence -c consequence
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Fri Oct 19 14:24:06 2018Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/jrmmendes/Work/HDL/ConSequence/src/simulation/qsim/ consequence -c consequenceInfo (119006): Selected device EP4CE115F29C7 for design "consequence"Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file consequence.vho in folder "/home/jrmmendes/Work/HDL/ConSequence/src/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 1053 megabytes    Info: Processing ended: Fri Oct 19 14:24:07 2018    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Fri Oct 19 15:58:08 2018Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/jrmmendes/Work/HDL/ConSequence/src/simulation/qsim/ consequence -c consequenceInfo (119006): Selected device EP4CE115F29C7 for design "consequence"Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file consequence.vho in folder "/home/jrmmendes/Work/HDL/ConSequence/src/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 1052 megabytes    Info: Processing ended: Fri Oct 19 15:58:08 2018    Info: Elapsed time: 00:00:00    Info: Total CPU time (on all processors): 00:00:01
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
@@ -34,43 +34,42 @@ Reading pref.tcl
 # do consequence.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:24:08 on Oct 19,2018# vcom -work work consequence.vho 
+# Start time: 15:58:09 on Oct 19,2018# vcom -work work consequence.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package VITAL_Timing
 # -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
-# -- Compiling entity xorshift_test
-# -- Compiling architecture structure of xorshift_test
-# End time: 14:24:08 on Oct 19,2018, Elapsed time: 0:00:00
+# -- Compiling entity nec_ir_controller_test
+# -- Compiling architecture structure of nec_ir_controller_test
+# End time: 15:58:09 on Oct 19,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:24:08 on Oct 19,2018# vcom -work work xorshift_test.vwf.vht 
+# Start time: 15:58:09 on Oct 19,2018# vcom -work work nec_ir_controller_test.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity xorshift_test_vhd_vec_tst
-# -- Compiling architecture xorshift_test_arch of xorshift_test_vhd_vec_tst
-# End time: 14:24:08 on Oct 19,2018, Elapsed time: 0:00:00# Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.xorshift_test_vhd_vec_tst # Start time: 14:24:08 on Oct 19,2018# Loading std.standard# Loading std.textio(body)# Loading ieee.std_logic_1164(body)# Loading work.xorshift_test_vhd_vec_tst(xorshift_test_arch)# Loading ieee.vital_timing(body)# Loading ieee.vital_primitives(body)# Loading altera.dffeas_pack# Loading altera.altera_primitives_components# Loading cycloneive.cycloneive_atom_pack(body)# Loading cycloneive.cycloneive_components# Loading work.xorshift_test(structure)# Loading ieee.std_logic_arith(body)# Loading cycloneive.cycloneive_io_obuf(arch)# Loading cycloneive.cycloneive_io_ibuf(arch)# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)# Loading altera.dffeas(vital_dffeas)
-# after#33
+# -- Compiling entity nec_ir_controller_test_vhd_vec_tst
+# -- Compiling architecture nec_ir_controller_test_arch of nec_ir_controller_test_vhd_vec_tst
+# End time: 15:58:09 on Oct 19,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.nec_ir_controller_test_vhd_vec_tst # Start time: 15:58:09 on Oct 19,2018# Loading std.standard# Loading std.textio(body)# Loading ieee.std_logic_1164(body)# Loading work.nec_ir_controller_test_vhd_vec_tst(nec_ir_controller_test_arch)# Loading ieee.vital_timing(body)# Loading ieee.vital_primitives(body)# Loading cycloneive.cycloneive_atom_pack(body)# Loading cycloneive.cycloneive_components# Loading work.nec_ir_controller_test(structure)# Loading ieee.std_logic_arith(body)# Loading cycloneive.cycloneive_io_obuf(arch)# Loading cycloneive.cycloneive_io_ibuf(arch)
+# after#31
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# End time: 14:24:09 on Oct 19,2018, Elapsed time: 0:00:01# Errors: 0, Warnings: 1
+# End time: 15:58:10 on Oct 19,2018, Elapsed time: 0:00:01# Errors: 0, Warnings: 1
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading /home/jrmmendes/Work/HDL/ConSequence/src/xorshift_test.vwf...
+Reading /home/jrmmendes/Work/HDL/ConSequence/src/nec_ir_controller_test.vwf...
 
 Reading /home/jrmmendes/Work/HDL/ConSequence/src/simulation/qsim/consequence.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to /home/jrmmendes/Work/HDL/ConSequence/src/simulation/qsim/consequence_20181019142409.sim.vwf
+Writing the resulting VWF to /home/jrmmendes/Work/HDL/ConSequence/src/simulation/qsim/consequence_20181019155810.sim.vwf
 
 Finished VCD to VWF conversion.
 

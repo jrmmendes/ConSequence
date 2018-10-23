@@ -1,50 +1,44 @@
 # do consequence.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:24:08 on Oct 19,2018
+# Start time: 15:58:09 on Oct 19,2018
 # vcom -work work consequence.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package VITAL_Timing
 # -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
-# -- Compiling entity xorshift_test
-# -- Compiling architecture structure of xorshift_test
-# End time: 14:24:08 on Oct 19,2018, Elapsed time: 0:00:00
+# -- Compiling entity nec_ir_controller_test
+# -- Compiling architecture structure of nec_ir_controller_test
+# End time: 15:58:09 on Oct 19,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:24:08 on Oct 19,2018
-# vcom -work work xorshift_test.vwf.vht 
+# Start time: 15:58:09 on Oct 19,2018
+# vcom -work work nec_ir_controller_test.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity xorshift_test_vhd_vec_tst
-# -- Compiling architecture xorshift_test_arch of xorshift_test_vhd_vec_tst
-# End time: 14:24:08 on Oct 19,2018, Elapsed time: 0:00:00
+# -- Compiling entity nec_ir_controller_test_vhd_vec_tst
+# -- Compiling architecture nec_ir_controller_test_arch of nec_ir_controller_test_vhd_vec_tst
+# End time: 15:58:09 on Oct 19,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.xorshift_test_vhd_vec_tst 
-# Start time: 14:24:08 on Oct 19,2018
+# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.nec_ir_controller_test_vhd_vec_tst 
+# Start time: 15:58:09 on Oct 19,2018
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.xorshift_test_vhd_vec_tst(xorshift_test_arch)
+# Loading work.nec_ir_controller_test_vhd_vec_tst(nec_ir_controller_test_arch)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
-# Loading altera.dffeas_pack
-# Loading altera.altera_primitives_components
 # Loading cycloneive.cycloneive_atom_pack(body)
 # Loading cycloneive.cycloneive_components
-# Loading work.xorshift_test(structure)
+# Loading work.nec_ir_controller_test(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
 # Loading cycloneive.cycloneive_io_ibuf(arch)
-# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
-# Loading altera.dffeas(vital_dffeas)
-# after#33
+# after#31
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# End time: 14:24:09 on Oct 19,2018, Elapsed time: 0:00:01
+# End time: 15:58:10 on Oct 19,2018, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
