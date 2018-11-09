@@ -21,12 +21,12 @@
 (Ainda não definido)
 
 # Versão
-  0.1.1
+  1.0.0
 
 # Roadmap
 ## 0.x: 
   - [x] Estruturação do projeto
-  - [ ] Implementação dos módulos auxiliares (Xorshift, Conversores, Multiplexadores, etc)
+  - [x] Implementação dos módulos auxiliares (Xorshift, Conversores, Multiplexadores, etc)
 
 ## 1.x:
   - [ ] Implementação do driver para o controle infravermelho
