@@ -161,7 +161,7 @@ div#multicolumn {
 </head><body><h2>Summary
 <a href='#' id='twist-summary-toggle' onclick='toggle("twist-summary", "[show details]", "[hide details]");'>[hide details]</a>
 </h2><div id='twist-summary' style='display:inline;'>
-<p>This design contains failing setup paths with a worst-case slack of -3.533 ns. Run <a href='tcl:taw_report_design_analysis -npaths 20'>Report Timing Closure Recommendations</a> for recommendations on how to close setup timing. For recommendations for any particular path, click the appropriate link in the table below. </p>
+<p>This design contains failing setup paths with a worst-case slack of -3.360 ns. Run <a href='tcl:taw_report_design_analysis -npaths 20'>Report Timing Closure Recommendations</a> for recommendations on how to close setup timing. For recommendations for any particular path, click the appropriate link in the table below. </p>
 </div><h2> Top Failing Paths
 <a href='#' id='twist-top_failing_paths-toggle' onclick='toggle("twist-top_failing_paths", "[show details]", "[hide details]");'>[hide details]</a>
 </h2><div id='twist-top_failing_paths' style='display:inline;'>
@@ -176,38 +176,38 @@ div#multicolumn {
 		</tr>
 		<tr>
 			<td>1</td>
-			<td>-3.533</td>
-			<td><span id='tip'><a href='#'>nec_ir_controller...|time_counter[5]<span>nec_ir_controller:inst|time_counter[5]</span></a></span></td>
-			<td><span id='tip'><a href='#'>nec_ir_controller...time_counter[30]<span>nec_ir_controller:inst|time_counter[30]</span></a></span></td>
-			<td><a href='tcl:taw_report_design_analysis -from nec_ir_controller:inst|time_counter[5] -to nec_ir_controller:inst|time_counter[30] -from_clock CLOCK_50 -to_clock CLOCK_50 -folder_name {Timing Closure Recommendations (nec_ir_controller:inst|time_counter[5] to nec_ir_controller:inst|time_counter[30])}'>Report recommendations for this path</a></td>
+			<td>-3.360</td>
+			<td>IRDriver:inst|number_of_bits[21]</td>
+			<td>IRDriver:inst|number_of_bits[22]</td>
+			<td><a href='tcl:taw_report_design_analysis -from IRDriver:inst|number_of_bits[21] -to IRDriver:inst|number_of_bits[22] -from_clock CLOCK_50 -to_clock CLOCK_50 -folder_name {Timing Closure Recommendations (IRDriver:inst|number_of_bits[21] to IRDriver:inst|number_of_bits[22])}'>Report recommendations for this path</a></td>
 		</tr>
 		<tr>
 			<td>2</td>
-			<td>-3.533</td>
-			<td><span id='tip'><a href='#'>nec_ir_controller...|time_counter[5]<span>nec_ir_controller:inst|time_counter[5]</span></a></span></td>
-			<td><span id='tip'><a href='#'>nec_ir_controller...time_counter[20]<span>nec_ir_controller:inst|time_counter[20]</span></a></span></td>
-			<td><a href='tcl:taw_report_design_analysis -from nec_ir_controller:inst|time_counter[5] -to nec_ir_controller:inst|time_counter[20] -from_clock CLOCK_50 -to_clock CLOCK_50 -folder_name {Timing Closure Recommendations (nec_ir_controller:inst|time_counter[5] to nec_ir_controller:inst|time_counter[20])}'>Report recommendations for this path</a></td>
+			<td>-3.360</td>
+			<td>IRDriver:inst|number_of_bits[21]</td>
+			<td>IRDriver:inst|number_of_bits[23]</td>
+			<td><a href='tcl:taw_report_design_analysis -from IRDriver:inst|number_of_bits[21] -to IRDriver:inst|number_of_bits[23] -from_clock CLOCK_50 -to_clock CLOCK_50 -folder_name {Timing Closure Recommendations (IRDriver:inst|number_of_bits[21] to IRDriver:inst|number_of_bits[23])}'>Report recommendations for this path</a></td>
 		</tr>
 		<tr>
 			<td>3</td>
-			<td>-3.533</td>
-			<td><span id='tip'><a href='#'>nec_ir_controller...|time_counter[5]<span>nec_ir_controller:inst|time_counter[5]</span></a></span></td>
-			<td><span id='tip'><a href='#'>nec_ir_controller...time_counter[22]<span>nec_ir_controller:inst|time_counter[22]</span></a></span></td>
-			<td><a href='tcl:taw_report_design_analysis -from nec_ir_controller:inst|time_counter[5] -to nec_ir_controller:inst|time_counter[22] -from_clock CLOCK_50 -to_clock CLOCK_50 -folder_name {Timing Closure Recommendations (nec_ir_controller:inst|time_counter[5] to nec_ir_controller:inst|time_counter[22])}'>Report recommendations for this path</a></td>
+			<td>-3.360</td>
+			<td>IRDriver:inst|number_of_bits[21]</td>
+			<td>IRDriver:inst|number_of_bits[24]</td>
+			<td><a href='tcl:taw_report_design_analysis -from IRDriver:inst|number_of_bits[21] -to IRDriver:inst|number_of_bits[24] -from_clock CLOCK_50 -to_clock CLOCK_50 -folder_name {Timing Closure Recommendations (IRDriver:inst|number_of_bits[21] to IRDriver:inst|number_of_bits[24])}'>Report recommendations for this path</a></td>
 		</tr>
 		<tr>
 			<td>4</td>
-			<td>-3.533</td>
-			<td><span id='tip'><a href='#'>nec_ir_controller...|time_counter[5]<span>nec_ir_controller:inst|time_counter[5]</span></a></span></td>
-			<td><span id='tip'><a href='#'>nec_ir_controller...time_counter[23]<span>nec_ir_controller:inst|time_counter[23]</span></a></span></td>
-			<td><a href='tcl:taw_report_design_analysis -from nec_ir_controller:inst|time_counter[5] -to nec_ir_controller:inst|time_counter[23] -from_clock CLOCK_50 -to_clock CLOCK_50 -folder_name {Timing Closure Recommendations (nec_ir_controller:inst|time_counter[5] to nec_ir_controller:inst|time_counter[23])}'>Report recommendations for this path</a></td>
+			<td>-3.360</td>
+			<td>IRDriver:inst|number_of_bits[21]</td>
+			<td>IRDriver:inst|number_of_bits[25]</td>
+			<td><a href='tcl:taw_report_design_analysis -from IRDriver:inst|number_of_bits[21] -to IRDriver:inst|number_of_bits[25] -from_clock CLOCK_50 -to_clock CLOCK_50 -folder_name {Timing Closure Recommendations (IRDriver:inst|number_of_bits[21] to IRDriver:inst|number_of_bits[25])}'>Report recommendations for this path</a></td>
 		</tr>
 		<tr>
 			<td>5</td>
-			<td>-3.533</td>
-			<td><span id='tip'><a href='#'>nec_ir_controller...|time_counter[5]<span>nec_ir_controller:inst|time_counter[5]</span></a></span></td>
-			<td><span id='tip'><a href='#'>nec_ir_controller...time_counter[24]<span>nec_ir_controller:inst|time_counter[24]</span></a></span></td>
-			<td><a href='tcl:taw_report_design_analysis -from nec_ir_controller:inst|time_counter[5] -to nec_ir_controller:inst|time_counter[24] -from_clock CLOCK_50 -to_clock CLOCK_50 -folder_name {Timing Closure Recommendations (nec_ir_controller:inst|time_counter[5] to nec_ir_controller:inst|time_counter[24])}'>Report recommendations for this path</a></td>
+			<td>-3.360</td>
+			<td>IRDriver:inst|number_of_bits[21]</td>
+			<td>IRDriver:inst|number_of_bits[26]</td>
+			<td><a href='tcl:taw_report_design_analysis -from IRDriver:inst|number_of_bits[21] -to IRDriver:inst|number_of_bits[26] -from_clock CLOCK_50 -to_clock CLOCK_50 -folder_name {Timing Closure Recommendations (IRDriver:inst|number_of_bits[21] to IRDriver:inst|number_of_bits[26])}'>Report recommendations for this path</a></td>
 		</tr></table>
 </div></body></html>
 <noscript>JavaScript must be enabled to view the report.</noscript>

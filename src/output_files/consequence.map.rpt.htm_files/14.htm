@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <HTML><HEAD>
-<TITLE>Registers Removed During Synthesis</TITLE>
+<TITLE>General Register Statistics</TITLE>
 
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/base.css">
@@ -18,20 +18,36 @@
 <BODY>
 <TABLE>
 <thead><TR  bgcolor="#BFBFBF">
-<TH>Register name</TH>
-<TH>Reason for Removal</TH>
+<TH>Statistic</TH>
+<TH>Value</TH>
 </TR>
 </thead><tbody><TR >
-<TD >nec_ir_controller:inst|state_flag[2]</TD>
-<TD >Stuck at GND due to stuck port data_in</TD>
+<TD >Total registers</TD>
+<TD >94</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >nec_ir_controller:inst|state.WAIT_ADDRESS</TD>
-<TD >Stuck at GND due to stuck port data_in</TD>
+<TD >Number of registers using Synchronous Clear</TD>
+<TD >65</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >Total Number of Removed Registers = 2</TD>
-<TD >&nbsp;</TD>
+<TD >Number of registers using Synchronous Load</TD>
+<TD >0</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Number of registers using Asynchronous Clear</TD>
+<TD >0</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Number of registers using Asynchronous Load</TD>
+<TD >0</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Number of registers using Clock Enable</TD>
+<TD >72</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >Number of registers using Preset</TD>
+<TD >0</TD>
 </TR>
 </tbody></TABLE>
 

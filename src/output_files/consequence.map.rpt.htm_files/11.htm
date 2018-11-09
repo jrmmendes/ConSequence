@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <HTML><HEAD>
-<TITLE>State Machine - |nec_ir_controller_test|nec_ir_controller:inst|state</TITLE>
+<TITLE>State Machine - |ir_driver_test|IRDriver:inst|SIGSTATE</TITLE>
 
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/base.css">
@@ -19,25 +19,121 @@
 <TABLE>
 <thead><TR  bgcolor="#BFBFBF">
 <TH>Name</TH>
-<TH>state.WAIT_ADDRESS</TH>
-<TH>state.WAIT_DIRECTION</TH>
-<TH>state.IDLE</TH>
+<TH>SIGSTATE.CHECKOUT</TH>
+<TH>SIGSTATE.SAVE_ONE</TH>
+<TH>SIGSTATE.SAVE_ZERO</TH>
+<TH>SIGSTATE.IDENTIFY_BIT</TH>
+<TH>SIGSTATE.WAIT_BIT</TH>
+<TH>SIGSTATE.REPEAT</TH>
+<TH>SIGSTATE.IDENTIFY_OPERATION</TH>
+<TH>SIGSTATE.WAIT_HEADER</TH>
+<TH>SIGSTATE.IDLE</TH>
 </TR>
 </thead><tbody><TR >
-<TD >state.IDLE</TD>
+<TD >SIGSTATE.IDLE</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >state.WAIT_DIRECTION</TD>
+<TD >SIGSTATE.WAIT_HEADER</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
 <TD >0</TD>
 <TD >1</TD>
 <TD >1</TD>
 </TR>
 </tbody><tbody><TR >
-<TD >state.WAIT_ADDRESS</TD>
+<TD >SIGSTATE.IDENTIFY_OPERATION</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
 <TD >1</TD>
+<TD >0</TD>
+<TD >1</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >SIGSTATE.REPEAT</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >SIGSTATE.WAIT_BIT</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >SIGSTATE.IDENTIFY_BIT</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >SIGSTATE.SAVE_ZERO</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >SIGSTATE.SAVE_ONE</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >SIGSTATE.CHECKOUT</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
 <TD >0</TD>
 <TD >1</TD>
 </TR>

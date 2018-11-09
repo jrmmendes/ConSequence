@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <HTML><HEAD>
-<TITLE>Multiplexer Statistics</TITLE>
+<TITLE>Multiplexer Restructuring Statistics (Restructuring Performed)</TITLE>
 
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/base.css">
@@ -16,7 +16,54 @@
 </HEAD>
 
 <BODY>
-Click on an entry below this folder.
+<TABLE>
+<thead><TR  bgcolor="#BFBFBF">
+<TH>Multiplexer Inputs</TH>
+<TH>Bus Width</TH>
+<TH>Baseline Area</TH>
+<TH>Area if Restructured</TH>
+<TH>Saving if Restructured</TH>
+<TH>Registered</TH>
+<TH>Example Multiplexer Output</TH>
+</TR>
+</thead><tbody><TR >
+<TD >3:1</TD>
+<TD >32 bits</TD>
+<TD >64 LEs</TD>
+<TD >32 LEs</TD>
+<TD >32 LEs</TD>
+<TD >Yes</TD>
+<TD >|ir_driver_test|IRDriver:inst|counter[24]</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >5:1</TD>
+<TD >32 bits</TD>
+<TD >96 LEs</TD>
+<TD >32 LEs</TD>
+<TD >64 LEs</TD>
+<TD >Yes</TD>
+<TD >|ir_driver_test|IRDriver:inst|number_of_bits[25]</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >7:1</TD>
+<TD >2 bits</TD>
+<TD >8 LEs</TD>
+<TD >6 LEs</TD>
+<TD >2 LEs</TD>
+<TD >No</TD>
+<TD >|ir_driver_test|IRDriver:inst|Selector5</TD>
+</TR>
+</tbody><tbody><TR >
+<TD >7:1</TD>
+<TD >2 bits</TD>
+<TD >8 LEs</TD>
+<TD >4 LEs</TD>
+<TD >4 LEs</TD>
+<TD >No</TD>
+<TD >|ir_driver_test|IRDriver:inst|Selector7</TD>
+</TR>
+</tbody></TABLE>
+
 <noscript>JavaScript must be enabled to view the report.</noscript>
 </BODY>
 </HTML>

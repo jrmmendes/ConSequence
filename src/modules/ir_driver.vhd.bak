@@ -1,0 +1,71 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity IRDriver is 
+  port(
+    data_in: in std_logic, -- dados vindos do transmissor IR
+    command: out std_logic_vector(7 downto 0), -- comando lido
+    data_ready: out std_logic, -- flag que indica que os dados podem ser lidos
+    state_flag: out std_logic_vector(1 downto 0) -- flag para testes 
+  );
+end entity;
+
+architecture behaviour of IRDriver is
+  
+  -- Buffer para armazenar os dados lidos temporariamente
+  signal data_buffer: std_logic_vector(31 downto 0);
+  
+  -- Tipo enumerado para os estados 
+  type state_type is (
+    IDLE, 
+    WAIT_HEADER, 
+    IDENTIFY_OPERATION, 
+    READ, 
+    REPEAT
+  );
+  
+  -- Signal referente ao estado atual da transmissao 
+  signal SIGSTATE : state_type := IDLE;
+
+  -- Constantes para controle do tempo @ 50MHz de clock
+  constant READ_DATA_TIME : integer := 150000; -- 3 ms
+
+begin 
+
+  process(clk)
+    variable counter : integer := 0;
+  begin
+
+    if(rising_edge(clk) = '1') then
+      case SIGSTATE is
+
+        when IDLE =>
+          if(data_in = '1') then
+            SIGSTATE <= WAIT_HEADER;
+          end if;
+
+        when WAIT_HEADER =>
+          if(data_in = '0') then
+            SIGSTATE <= IDENTIFY_OPERATION;
+          end if;
+
+        when IDENTIFY_OPERATION =>         
+          if(data_in = '1') then 
+            if(counter >= READ_DATA_TIME) then
+              SIGSTATE <= READ;
+            else
+              SIGSTATE <= REPEAT;
+            end if;
+            counter := 0;
+          else
+            counter := counter + 1;
+          end if;
+        
+        when READ =>
+          state_flag <= "00"; 
+        when REPEAT =>
+          state_flag <= "11"; 
+      end case;
+    end if;
+  end process;
+end architecture;

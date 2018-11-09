@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Oct 19 16:14:07 2018
+Analysis & Synthesis Status : Successful - Wed Nov  7 12:09:11 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : consequence
-Top-level Entity Name : nec_ir_controller_test
+Top-level Entity Name : ir_driver_test
 Family : Cyclone IV E
-Total logic elements : 47
-    Total combinational functions : 46
-    Dedicated logic registers : 36
-Total registers : 36
-Total pins : 6
+Total logic elements : 134
+    Total combinational functions : 126
+    Dedicated logic registers : 94
+Total registers : 94
+Total pins : 15
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

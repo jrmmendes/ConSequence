@@ -4,23 +4,63 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "LEDG[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG[1]",
+					"strict" : false
+				},
+				{
 					"name" : "LEDG[0]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[1]",
+					"name" : "LEDR0",
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[0]",
+					"name" : "LEDR17",
 					"strict" : false
 				},
 				{
-					"name" : "IRDA_RXD",
+					"name" : "LEDR16",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR15",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR14",
 					"strict" : false
 				},
 				{
 					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "IRDA_RXD",
 					"strict" : false
 				}
 			]

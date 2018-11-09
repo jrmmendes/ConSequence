@@ -1,0 +1,21 @@
+-------------------------------------------------
+-- Gerador de clock
+-- Por Jose R. M. Junior <jrmmendes@outlook.com>
+-- Ultima modificacao: 09/10/2018 11:52
+-------------------------------------------------
+-- Bibliotecas ----------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- Entidade -------------------------------------
+entity ClockGenerator is
+  port(
+    clk: in std_logic -- clock de 50 MHz
+  );
+end entity;
+-- Arquiteturas ---------------------------------
+architecture generate1s of ClockGenerator is
+
+begin
+  process()
+end architecture;

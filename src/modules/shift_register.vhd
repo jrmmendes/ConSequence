@@ -34,3 +34,15 @@ begin
   end process;
   p_data_out <= SHIFT_REG;
 end architecture;
+
+architecture PIPO of shift_register is
+  signal SHIFT_REG : std_logic_vector(REGSIZE-1 downto 0);
+begin
+  process(clk) 
+  begin
+    if(clk'event and clk='1') then
+      SHIFT_REG <= p_data_in;
+    end if;
+    p_data_out <= SHIFT_REG;
+  end process;
+end architecture;
