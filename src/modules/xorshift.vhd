@@ -34,9 +34,10 @@ begin
   begin 
     
     if clk'event and clk='1' then
-      SEED <=  SEED(30 downto 0) & (SEED(31) XOR SEED(0)); 
+      SEED <=  SEED(30 downto 0) & (SEED(31) XOR SEED(0));
       rnd <= SEED(31 downto 31-output_size+1);
     end if;
+    
   end process;
   
 end architecture;
